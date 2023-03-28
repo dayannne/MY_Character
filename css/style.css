@@ -1,0 +1,400 @@
+@font-face {
+  font-family: 'SDSamliphopangche_Outline';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --body: #fbdf97;
+  --body-border: #806a5f;
+  --brown: #725545;
+  --face: #eccca9;
+  --face-border: #e2c196;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'SDSamliphopangche_Outline';
+  color: var(--brown);
+  font-size: 50px;
+  margin: 0;
+}
+
+h1 span {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: gold;
+}
+
+/* 프레임 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 50%;
+  background-color: rgb(255, 248, 218);
+  box-shadow: 0px 0px 15px 15px rgb(255, 248, 218);
+}
+
+.character {
+  width: 700px;
+  height: 750px;
+  z-index: 2;
+}
+
+.head,
+.ear,
+.face,
+.eye,
+.nose,
+.mouse,
+.flower,
+.center,
+.petal,
+.cheek,
+.dress {
+  position: absolute;
+  transform: translate(-50%);
+}
+
+.head,
+.face,
+.mouse,
+.flower,
+.center,
+.dress {
+  left: 50%;
+}
+
+/* 머리, 귀 (겉부분) */
+
+.head.top {
+  width: 400px;
+  height: 330px;
+  background: var(--body);
+  border-radius: 200px 200px 150px 150px;
+  border: 3px solid var(--body-border);
+  top: 10%;
+}
+
+.head.top.in {
+  border: none;
+  top: 0;
+}
+.head.bottom {
+  position: absolute;
+  width: 460px;
+  height: 265px;
+  background: var(--body);
+  border: 3px solid var(--body-border);
+  border-radius: 50%;
+  top: 35%;
+}
+
+.ear {
+  width: 150px;
+  height: 145px;
+  background: var(--body);
+  border: 3px solid var(--body-border);
+  border-radius: 150px 250px 150px 200px;
+  top: 5%;
+}
+
+.ear.L {
+  left: 35%;
+}
+.ear.R {
+  left: 52%;
+  transform: scaleX(-1);
+}
+
+.ear.pur {
+  background: var(--face);
+  top: 20%;
+  left: 51%;
+  width: 100px;
+  height: 100px;
+  border-radius: 150px 250px 150px 200px;
+  border: 2px solid var(--face-border);
+  box-shadow: inset 0px 0px 10px 7px var(--face-border);
+}
+
+/* 얼굴 */
+
+.face {
+  background: var(--face);
+  border: 2px solid var(--face-border);
+}
+
+.face.top:not(.face.top.in) {
+  box-shadow: inset 0px 0px 10px 7px var(--face-border);
+}
+
+.face.top {
+  width: 350px;
+  height: 265px;
+  border-radius: 200px 200px 150px 150px;
+  top: 15%;
+}
+
+.face.top.in {
+  /* width: 330px; */
+  border: none;
+  top: 0;
+}
+
+.face.bottom {
+  width: 400px;
+  height: 210px;
+  border-radius: 50%;
+  top: 35%;
+  box-shadow: inset 0px 0px 10px 5px var(--face-border);
+}
+
+/* 눈 */
+.eye {
+  width: 55px;
+  height: 48px;
+  background: var(--brown);
+  border: 1px solid #836e63;
+  border-radius: 50%;
+  top: 33%;
+}
+.eye.L {
+  left: 32%;
+}
+.eye.R {
+  left: 67%;
+}
+
+/* 코 */
+.nose {
+  width: 70px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--brown);
+  top: 50%;
+  left: 50%;
+}
+
+.pupil {
+  width: 17px;
+  height: 17px;
+  border: none;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.eye.pupil {
+  left: 50%;
+  top: 48%;
+}
+.nose.pupil {
+  width: 20px;
+  height: 25px;
+  left: 35%;
+  top: 33%;
+}
+
+/*입*/
+
+.mouse.corner {
+  width: 200px;
+  height: 200px;
+  border-radius: 80px 90px 80px 100px;
+  transform: rotate(135deg);
+  border: 5px solid var(--brown);
+  background: var(--face);
+  top: 5%;
+  left: 20%;
+}
+.mouse.shade {
+  width: 250px;
+  height: 160px;
+  border-radius: 100px 100px 0 0;
+  background: var(--face);
+  top: 4%;
+}
+
+.mouse.tongue {
+  background: #fca7a7;
+  border: 5px solid var(--brown);
+  width: 140px;
+  height: 140px;
+  border-radius: 100px 45px 100px 50px;
+  transform: rotate(135deg);
+  top: 40%;
+  left: 28.5%;
+}
+
+.mouse.philtrum {
+  width: 7px;
+  height: 25px;
+  background: var(--brown);
+  top: 76%;
+}
+
+/*머리 장식*/
+.flower {
+  top: -13%;
+  width: 150px;
+  height: 100px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 14px;
+  border: 2px solid var(--brown);
+  background-color: rgb(62, 139, 62);
+  border-radius: 50%;
+}
+
+.petal {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  border: 2px solid var(--brown);
+  background: gold;
+  border-radius: 0 100px 0 100px;
+}
+
+.petal.one {
+  left: 11%;
+  top: 33%;
+  transform: rotate(10deg);
+}
+.petal.two {
+  right: 10%;
+  top: 33%;
+  transform: rotate(10deg);
+  transform: scaleX(-1);
+}
+.petal.three {
+  left: 11%;
+  top: 53%;
+  transform: rotate(10deg);
+  transform: scaleY(-1);
+}
+.petal.four {
+  right: 10%;
+  top: 53%;
+  transform: rotate(10deg);
+  transform: scale(-1);
+}
+
+/* 블러셔 */
+.cheek {
+  width: 75px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fa9278;
+  box-shadow: 0px 0px 15px 15px rgb(250, 146, 120);
+}
+
+.cheek.L {
+  left: 10%;
+  bottom: 20%;
+}
+
+.cheek.R {
+  left: 90%;
+  bottom: 20%;
+}
+
+/* 바디 */
+
+.body {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  height: 250px;
+  border: 3px solid var(--body-border);
+  left: 50%;
+  top: 74%;
+  background-color: var(--face);
+  z-index: -2;
+  border-radius: 200px;
+  box-shadow: inset 0px 0px 10px 7px var(--face-border);
+}
+.dress {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  height: 260px;
+  border: 3px solid var(--body-border);
+  border-radius: 200px 200px 200px 200px / 200px 200px 50px 50px;
+  top: 69%;
+  z-index: -1;
+  background-color: gold;
+}
+
+.dress_top {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 180px;
+  border-radius: 10px 200px 10px 150px;
+  background: var(--body);
+  border: 3px solid var(--body-border);
+  transform: rotate(0deg);
+  top: -10%;
+}
+
+.dress_top.R {
+  left: 47%;
+}
+.dress_top.L {
+  right: 47%;
+  transform: scaleX(-1) rotate(0deg);
+}
+
+.ribbon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 33%;
+  left: 50%;
+}
+
+/* 손 */
+
+.hand {
+  position: absolute;
+}
+
+.hand.L {
+  top: 2%;
+  right: 42%;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+
+.hand.R {
+  top: 2%;
+  left: 42%;
+}
+
+/* 발 */
+
+.foot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 82%;
+  z-index: -3;
+}
+
+.foot.L {
+  left: 30%;
+  transform: rotate(15deg);
+}
+.foot.R {
+  right: 30%;
+
+  transform: scaleX(-1) rotate(15deg);
+}
